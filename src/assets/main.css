@@ -1,0 +1,22 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+table {
+  text-align: left;
+}
+.content {
+  position: absolute;
+  top: 80px;
+  left: 250px;
+  right: 0;
+  padding: 25px;
+  bottom: 0;
+  overflow-y: auto;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0
+}
