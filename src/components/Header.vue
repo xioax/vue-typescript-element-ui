@@ -2,13 +2,16 @@
   <div class="header">
     <h2>后台管理系统</h2>
     <div class="userIcon">
-      <el-dropdown>
+      <el-dropdown
+        trigger="click"
+        @command="handleCommand"
+      >
         <span class="el-dropdown-link">
           <img class="user-logo" src="../../assets/img/bg.png">
           <b>element_admin</b>
         </span>
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>退出</el-dropdown-item>
+          <el-dropdown-item command="a">退出</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
     </div>
@@ -20,6 +23,9 @@ import Vue from 'vue'
 import Component from 'vue-class-component'
   @Component
 export default class Header extends Vue {
+    handleCommand (command) {
+      alert('layout' + command)
+    }
   }
 </script>
 
@@ -42,7 +48,7 @@ export default class Header extends Vue {
 }
 .userIcon {
   float: right;
-  margin: 8px 60px 0px 0px;
+  margin: 12px 60px 0px 0px;
   cursor: pointer;
 }
 .userIcon b {
